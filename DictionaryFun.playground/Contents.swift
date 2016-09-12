@@ -14,7 +14,7 @@
  */
 // write your code here
 
-
+var capitalsCities = ["New York":"Albany", "Ohio":"Columbus","Florida":"Tallahassee","Georgia":"Atlanta","Kentucky":"Frankfot"]
 
 
 
@@ -24,7 +24,7 @@
  ### 2. What is the type of the dictionary you created in Question 1?
  */
 
-
+// String:String
 
 
 
@@ -36,9 +36,7 @@
  */
 // write your code here
 
-
-
-
+var capital = capitalsCities["Florida"]
 
 
 
@@ -49,7 +47,9 @@
 // write your code here
 
 
-
+if let capital = capitalsCities["Florida"] {
+    print("The capital of Florida is \(capital)")
+}
 
 
 
@@ -61,7 +61,7 @@
 // write your code here
 
 
-
+var anotherCapital = capitalsCities["Pennsylvania"]
 
 
 
@@ -74,9 +74,11 @@
 
 
 
-
-
-
+if let capital = capitalsCities["Pennsylvania"] {
+    print("The capital of Pennsylvania is \(capital)")
+} else {
+    print("I don't know Pennsylvania's capital")
+}
 
 
 /*: question7
@@ -85,7 +87,7 @@
 // write your code here
 
 
-
+capitalsCities["Pennsylvania"] = "Harrisbug"
 
 
 
@@ -97,7 +99,9 @@
 // write your code here
 
 
-
+    if let capital = capitalsCities["Pennsylvania"] {
+        print("Pennsylvania's capital is \(capital)")
+    }
 
 
 
@@ -108,7 +112,11 @@
  */
 // write your code here
 
+capitalsCities
 
+capitalsCities.removeValueForKey("Pennsylvania")
+
+capitalsCities
 
 
 
@@ -121,8 +129,9 @@
 let state = "New York"
 // write your code here
 
-
-
+if let newCapital = capitalsCities[state] {
+print("The capital of \(state) is \(newCapital)")
+}
 
 
 
@@ -141,18 +150,15 @@ let state = "New York"
 // write your code here
 
 
+var dic = [String():String()]
 
-
-
-
-
-
+dic = ["Nirvana":"Kurt Cobain, Krist Novoselic, Dave Grohl","The Beatles":" John Lennon, George Harrison, Paul McCartney, Ringo Starr","The Breeders":"Kim Deal, Kelley Deal, Josephine Wiggs, Jim Macpherson","Pixies":"Frank Black, Joey Santiago, Kim Deal, David Lovering"]
 
 
 /*: question12
  ### 12. What is the type of the dictionary you created in Question 11?
  */
-
+// [String:String]
 
 
 
@@ -167,7 +173,9 @@ let bandName = "Pixies"
 // write your code here
 
 
-
+if let members = dic[bandName] {
+    print(members)
+}
 
 
 
